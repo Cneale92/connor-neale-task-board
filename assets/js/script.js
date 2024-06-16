@@ -17,7 +17,7 @@ function saveTasksToLocalStorage(tasks) {
 
 // Todo: create a function to generate a unique task id
 function generateTaskId() {
-
+    return crypto.randomUUID();
 }
 
 // Todo: create a function to create a task card
