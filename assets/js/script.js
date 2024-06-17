@@ -76,7 +76,7 @@ function createTaskCard(task) {
 
 // Todo: create a function to render the task list and make cards draggable
 function renderTaskList() {
-  const tasks = readTasksFromStorage();
+  const tasks = readTasksFromLocalStorage();
 
   const todoList = $("#todo-cards");
   todoList.empty();
@@ -125,10 +125,10 @@ function handleAddTask(event) {
     status: "to-do",
   };
 
-  const tasks = readTasksFromStorage();
+  const tasks = readTasksFromLocalStorage();
   tasks.push(newTask);
 
-  saveTasksToStorage(tasks);
+  saveTasksToLocalStorage(tasks);
   renderTaskList();
 
   $("#taskTitle").val("");
@@ -138,8 +138,17 @@ function handleAddTask(event) {
 
 
 // Todo: create a function to handle deleting a task
-function handleDeleteTask(event){
+function handleDeleteTask(event) {
+  const taskId = $(this).attr("data-project-id");
+  const tasks = readTasksFromLocalStorage();
 
+  for (let i = 0; i < tasks.length; i++) {
+    if (tasks[i].id == taskId) {
+      tasks.splice([i], 1);
+    }
+  }
+  saveTasksToLocalStorage(tasks);
+  renderTaskList();
 }
 
 // Todo: create a function to handle dropping a task into a new status lane
