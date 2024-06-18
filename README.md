@@ -7,4 +7,4 @@ This project's goal was to create a modal with a form in it that would allow the
 [Task Board](https://cneale92.github.io/connor-neale-task-board/)
 
 ## Gif of the webpage
-![Task Board](https://github.com/Cneale92/employee-payroll-tracker/blob/main/Develop/assets/Untitled_%20Jun%203%2C%202024%2010_18%20PM.gif)
+![Task Board](https://github.com/Cneale92/connor-neale-task-board/blob/main/assets/images/Untitled_%20Jun%2017,%202024%2010_09%20PM.gif?raw=true)
